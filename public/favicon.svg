@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#0d0717"/>
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="6.5" fill="none" stroke="#4c1d95" stroke-width="1"/>
+  <polygon points="16,3 29,16 16,29 3,16" fill="none" stroke="url(#sg)" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="16,8 24,16 16,24 8,16" fill="#7c3aed" fill-opacity="0.18"/>
+  <text x="16" y="21" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="700" font-family="system-ui,-apple-system,sans-serif">IP</text>
+</svg>
