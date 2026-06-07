@@ -31,7 +31,7 @@ const PROJECTS = [
     gallery: ["/1/1.png", "/1/2.png", "/1/3.jpg", "/1/4.png"],
     projectUrl: "https://zxckys.vercel.app/",
     details: {
-      stack: ["React", "TypeScript", "Node.js", "Vercel (test)"],
+      stack: ["React", "JavaScript / TypeScript", "Node.js", "Vercel (test)"],
       year: "2026",
       longDesc:
         "P2P Marketplace — це платформа для прямої торгівлі між користувачами. Реалізовано систему оголошень з фільтрацією, пошуком та категоріями. Вбудований чат для спілкування між покупцем і продавцем, система рейтингів та відгуків, безпечні угоди з підтвердженням. Адаптивний інтерфейс, оптимізований для мобільних пристроїв.",
@@ -48,7 +48,7 @@ const PROJECTS = [
     gallery: ["/2/2.png"],
     projectUrl: null,
     details: {
-      stack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+      stack: ["React", "JavaScript / TypeScript", "Next.js", "Tailwind CSS"],
       year: "2026",
       longDesc:
         "CoffeeOnly — спеціалізований інтернет-магазин кави з акцентом на якість і прозорість. Реалізовано повноцінний каталог з фільтрацією за сортом, регіоном та обсмажкою, кошик із збереженням стану, систему відгуків клієнтів та сторінки товарів з детальним описом смакового профілю. Пряма співпраця з фермерами з Ефіопії, Колумбії та Бразилії. Адаптивний дизайн з акцентами на типографіку та зручну навігацію.",
@@ -65,7 +65,7 @@ const PROJECTS = [
     gallery: ["/3/3.png"],
     projectUrl: null,
     details: {
-      stack: ["Next.js", "TypeScript", "Puppeteer", "CSS Parser"],
+      stack: ["Next.js", "JavaScript / TypeScript", "Puppeteer", "CSS Parser"],
       year: "2026",
       longDesc:
         "PixelProbe — інструмент для глибокого аналізу інтерфейсів сайтів. Вставляєш посилання — отримуєш повну палітру кольорів, CSS-змінні, типографічну систему та патерни компонентів у форматі готових дизайн-токенів. Вбудований Visual Inspector дозволяє інспектувати елементи прямо в браузері, а CSS Exporter — миттєво експортувати стилі. Підтримка предперегляду: color palette, CSS variables, visual preview.",
@@ -102,7 +102,7 @@ const CONVERSATIONS = [
     clientColor: "from-sky-500 to-blue-600",
     prompt: "Зроби landing під наш SaaS продукт, треба швидко.",
     reply:
-      "Next.js 14 + Tailwind. Hero з particle-ефектом, секція pricing, анімований FAQ, CTA з градієнтом. SEO meta — одразу.",
+      "Next.js 14 + Tailwind. Hero з particle-ефектом, секція pricing, анімований FAQ, CTA з градієнтом.",
     tokens: 734,
     ms: 1100,
   },
@@ -132,7 +132,7 @@ const CONVERSATIONS = [
     clientColor: "from-cyan-500 to-sky-600",
     prompt: "Можеш зробити сайт що виглядає як продукт з Силіконової долини?",
     reply:
-      "Можу. Скинь референси або опиши продукт — зрозумію напрямок і запропоную структуру під твою задачу.",
+      "Звісно. Скинь референси або опиши продукт — зрозумію напрямок і запропоную структуру під твою задачу.",
     tokens: 743,
     ms: 1180,
   },
@@ -217,7 +217,7 @@ function AIStreamWidget() {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col min-w-0">
+    <div className="relative w-full flex flex-col min-w-0" style={{ height: "100%" }}>
       {/* Header bar */}
       <div className="flex items-center justify-between mb-5 min-w-0">
         <div className="flex items-center gap-2 min-w-0">
@@ -247,7 +247,7 @@ function AIStreamWidget() {
       </div>
 
       {/* Chat area */}
-      <div className="flex-1 flex flex-col gap-4 overflow-hidden min-w-0">
+      <div className="flex-1 flex flex-col gap-4 min-w-0 overflow-hidden">
         {/* Client message */}
         <div className="flex items-start gap-2.5 min-w-0">
           <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${conv.clientColor} flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg`}>
@@ -472,12 +472,8 @@ function Navbar({ hidden }: { hidden?: boolean }) {
         }}
       >
         <nav className="w-full px-5 sm:px-8 md:px-16 lg:px-24 h-14 sm:h-16 flex items-center justify-between md:justify-center">
-          {/* Mobile: logo left + burger right */}
-          <span className="text-white/70 text-sm font-semibold md:hidden tracking-tight">
-            Ігор <span className="text-violet-400">Паламарчук</span>
-          </span>
+        
 
-          {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-8">
             {links.map((link) => (
               <li key={link.label}>
@@ -491,7 +487,6 @@ function Navbar({ hidden }: { hidden?: boolean }) {
             ))}
           </ul>
 
-          {/* Mobile burger */}
           <button
             className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
             onClick={() => setMobileOpen((v) => !v)}
@@ -502,7 +497,6 @@ function Navbar({ hidden }: { hidden?: boolean }) {
         </nav>
       </header>
 
-      {/* Mobile dropdown menu */}
       <AnimatePresence>
         {mobileOpen && !hidden && (
           <motion.div
@@ -579,8 +573,8 @@ function Hero() {
               <div className="space-y-2.5 sm:space-y-3 mb-8 sm:mb-10">
                 {[
                   { icon: <Rocket size={11} />, text: "Швидкий старт — перший результат за 24 години" },
-                  { icon: <Sparkles size={11} />, text: "AI-інтеграції — GPT-5, Claude, Arena, кастомні моделі" },
-                  { icon: <Terminal size={12} />, text: "Чистий код — React, TypeScript, сучасний стек" },
+                  { icon: <Sparkles size={11} />, text: "AI-інтеграції — GPT-5, Claude Code, Arena AI, кастомні моделі" },
+                  { icon: <Terminal size={12} />, text: "Чистий код — React, JavaScript / TypeScript, сучасний стек" },
                 ].map((f) => (
                   <div key={f.text} className="flex items-start sm:items-center gap-2.5 sm:gap-3 text-white/70">
                     <div className="w-5 h-5 rounded-full bg-violet-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
@@ -611,7 +605,7 @@ function Hero() {
               </div>
             </FadeIn>
 
-            {/* Mobile AI Widget — shown only on mobile/tablet below xl */}
+            {/* Mobile AI Widget */}
             <FadeIn delay={0.18} className="xl:hidden mt-8 sm:mt-10 w-full">
               <div
                 className="relative rounded-2xl border border-violet-500/15 overflow-hidden shadow-2xl shadow-violet-900/15 p-5 sm:p-6 w-full"
@@ -619,7 +613,7 @@ function Hero() {
                   background: "rgba(255,255,255,0.04)",
                   backdropFilter: "blur(32px)",
                   WebkitBackdropFilter: "blur(32px)",
-                  minHeight: "320px",
+                  height: "380px",
                 }}
               >
                 <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-violet-500/[0.12] blur-3xl" />
@@ -668,53 +662,39 @@ function About() {
             <span className="text-violet-300 text-xs font-semibold uppercase tracking-[0.24em]">Про мене</span>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-start">
-            <div className="md:col-span-2">
-              <h2 className="text-[1.9rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/90 tracking-tight mb-5 sm:mb-6 leading-[1.1]">
-                Бекенд та фронтенд розробник
-              </h2>
-              <p className="text-white/40 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed">
-                Я — розробник-універсал: пишу складні вебдодатки, системи автоматизації та telegram-ботів. Але головне
-                — я працюю через промт-інженерію. Це моя суперсила: проектую промпти, автоматизую логіку, генерую код
-                через AI і роблю це все дуже швидко.
-              </p>
-              <p className="text-white/40 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed">
-                Від ідеї до продакшену — і архітектура, і інтеграції, і деплой. Працюю з React, TypeScript, Node.js та
-                будь-якими AI інструментами (Claude, GPT-5, Arena тощо).
-              </p>
+          {/* Heading + body — full-width single column */}
+          <h2 className="text-[1.9rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/90 tracking-tight mb-5 sm:mb-6 leading-[1.1]">
+            Fullstack розробник · AI-Web розробник
+          </h2>
 
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                {[
-                  { label: "Вік", value: "19 років" },
-                  { label: "Напрямок", value: "Ai engineer" },
-                ].map((item) => (
-                  <div key={item.label} className="px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-white/8 bg-white/[0.03] backdrop-blur-sm">
-                    <div className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider mb-1">{item.label}</div>
-                    <div className="text-base sm:text-xl md:text-2xl font-bold text-white/90">{item.value}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="flex flex-col gap-3 mb-6 sm:mb-8">
+            <p className="text-white/45 text-sm sm:text-base md:text-lg leading-relaxed">
+              Я — розробник-універсал: пишу складні вебдодатки, системи автоматизації та telegram-ботів. Але головне
+              — я працюю через промт-інженерію. Це моя суперсила: проектую промпти, автоматизую логіку, генерую код
+              через AI і роблю це все дуже швидко.
+            </p>
+            <p className="text-white/45 text-sm sm:text-base md:text-lg leading-relaxed">
+              Від ідеї до продакшену — і архітектура, і інтеграції, і деплой. Працюю з React, JavaScript / TypeScript, Node.js та
+              будь-якими AI інструментами.
+            </p>
+          </div>
 
-            {/* Photo */}
-            <div className="relative h-fit mt-0 md:mt-12">
-              <div
-                className="relative w-full rounded-2xl overflow-hidden border border-violet-500/20 bg-gradient-to-br from-violet-600/10 to-cyan-600/5"
-                style={{ aspectRatio: "4/3", maxHeight: "320px" }}
-              >
-                <img
-                  src="/photo1.png"
-                  alt="Портрет"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: "center 9%" }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-violet-900/40 to-transparent" />
+          {/* Info pills */}
+          <div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10">
+            {[
+              { label: "Вік", value: "19 років" },
+              { label: "Напрямок", value: "AI Automation Developer" },
+            ].map((item) => (
+              <div key={item.label} className="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl border border-white/8 bg-white/[0.03] backdrop-blur-sm flex items-center gap-3">
+                <span className="text-[11px] sm:text-xs text-white/35 uppercase tracking-wider">{item.label}</span>
+                <div className="w-px h-4 bg-white/10" />
+                <span className="text-sm sm:text-base font-bold text-white/90">{item.value}</span>
               </div>
-            </div>
+            ))}
           </div>
 
           {/* Cards */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:-mt-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-10">
             {[
               { title: "Чіткий план", desc: "Перед стартом обговорюємо задачу, строки і очікування" },
               { title: "Консультація", desc: "Постійно в діалозі — розберу будь-яку задачу разом з тобою" },
@@ -733,8 +713,8 @@ function About() {
           </div>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2 mt-6 sm:mt-8">
-            {["React", "TypeScript", "Node.js", "Prompt Engineering", "Telegram Bots", "AI Tools"].map((t) => (
+          <div className="flex flex-wrap gap-2">
+            {["React", "JavaScript / TypeScript", "Node.js", "Prompt Engineering", "Telegram Bots", "AI Tools"].map((t) => (
               <span
                 key={t}
                 className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-white/8 bg-white/[0.02] text-white/70 text-xs sm:text-sm backdrop-blur-sm"
@@ -855,13 +835,12 @@ function ProjectModal({
               <X size={14} className="text-white/70" />
             </button>
 
-            {/* Drag handle for mobile */}
             <div className="sm:hidden flex justify-center pt-3 pb-1">
               <div className="w-10 h-1 rounded-full bg-white/20" />
             </div>
 
             {gallery.length > 0 && (
-              <div className="relative w-full h-48 sm:h-64 md:h-80 bg-black/40 overflow-hidden group/gallery">
+              <div className="relative w-full h-40 sm:h-52 md:h-64 bg-black/40 overflow-hidden group/gallery">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={imgIdx}
@@ -955,7 +934,7 @@ function ProjectModal({
                     className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-violet-600/20 hover:bg-violet-600/35 border border-violet-500/30 hover:border-violet-500/50 text-violet-300 hover:text-violet-200 text-xs font-semibold transition-all duration-200"
                   >
                     <ExternalLink size={13} />
-                    Переглянути проєкт
+                    Переглянути демо проєкт
                   </a>
                 </div>
               )}
@@ -1051,7 +1030,7 @@ const SKILL_CATEGORIES = [
     items: [
       { name: "React", note: "Hooks, Context, оптимізація" },
       { name: "Next.js", note: "App Router, SSR, SSG" },
-      { name: "TypeScript", note: "Строга типізація" },
+      { name: "JavaScript / TypeScript", note: "Скрипти та строга типізація" },
       { name: "Tailwind CSS", note: "Utility-first стилі" },
       { name: "Vite", note: "Швидкий білд-тул" },
       { name: "Framer Motion", note: "Анімації та переходи" },
@@ -1077,8 +1056,8 @@ const SKILL_CATEGORIES = [
     accent: "fuchsia",
     desc: "Інтеграції з мовними моделями та автоматизація процесів",
     items: [
-      { name: "GPT-5 / Claude", note: "Провідні LLM" },
-      { name: "Arena", note: "Мультимодельна платформа" },
+      { name: "GPT-5 / Claude Code", note: "Провідні LLM" },
+      { name: "Arena AI", note: "Мультимодельна платформа" },
       { name: "LangChain", note: "Ланцюги та агенти" },
       { name: "Prompt Eng.", note: "Проектування промптів" },
       { name: "Replicate API", note: "Генерація зображень" },
@@ -1128,8 +1107,8 @@ const accentMap: Record<string, {
 };
 
 const MARQUEE_ITEMS = [
-  "React", "TypeScript", "Next.js", "Node.js", "PostgreSQL",
-  "GPT-5", "Claude", "Arena", "LangChain", "Tailwind CSS", "Vite",
+  "React", "JavaScript / TypeScript", "Next.js", "Node.js", "PostgreSQL",
+  "GPT-5", "Claude Code", "Arena AI", "LangChain", "Tailwind CSS", "Vite",
   "Railway", "Prompt Engineering", "Edge Runtime", "Framer Motion", "Docker",
 ];
 
@@ -1187,7 +1166,6 @@ function Skills() {
           </div>
         </FadeIn>
 
-        {/* 4 карточки */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
           {SKILL_CATEGORIES.map((cat, ci) => {
             const ac = accentMap[cat.accent];
@@ -1271,11 +1249,9 @@ function Contact() {
           <p className="text-white/40 text-sm sm:text-base md:text-lg max-w-lg mb-4 leading-relaxed">
             Маєш ідею чи задачу? Пиши — обговоримо деталі та зроблю. Беру фріланс-проєкти, складні штуки та все, що
             пов'язано з кодом.
+            <br />
+            Відповідаю за 1–3 год · Open for freelance
           </p>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-500/20 bg-green-500/5 mb-7 sm:mb-10">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-green-400/80 text-[11px] sm:text-xs font-medium">Відповідаю за 1–3 год · Open for freelance</span>
-          </div>
         </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 sm:mb-12 max-w-lg">
