@@ -32,7 +32,7 @@ const PROJECTS = [
     tagColor: "text-violet-300/70 bg-violet-500/10 border-violet-500/20",
     projectUrl: "https://zxckys.vercel.app/",
     details: {
-      stack: ["React", "JavaScript / TypeScript", "Node.js", "Vercel (test)"],
+      stack: ["React", "TypeScript", "Node.js", "Vercel (test)"],
       year: "2026",
       longDesc:
         "P2P Marketplace — це платформа для прямої торгівлі між користувачами. Реалізовано систему оголошень з фільтрацією, пошуком та категоріями. Вбудований чат для спілкування між покупцем і продавцем, система рейтингів та відгуків, безпечні угоди з підтвердженням. Адаптивний інтерфейс, оптимізований для мобільних пристроїв.",
@@ -49,7 +49,7 @@ const PROJECTS = [
     tagColor: "text-green-300/70 bg-green-500/10 border-green-500/20",
     projectUrl: null,
     details: {
-      stack: ["React", "JavaScript / TypeScript", "Next.js", "Tailwind CSS"],
+      stack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
       year: "2026",
       longDesc:
         "CoffeeOnly — спеціалізований інтернет-магазин кави з акцентом на якість і прозорість. Реалізовано повноцінний каталог з фільтрацією за сортом, регіоном та обсмажкою, кошик із збереженням стану, систему відгуків клієнтів та сторінки товарів з детальним описом смакового профілю. Пряма співпраця з фермерами з Ефіопії, Колумбії та Бразилії. Адаптивний дизайн з акцентами на типографіку та зручну навігацію.",
@@ -66,7 +66,7 @@ const PROJECTS = [
     tagColor: "text-fuchsia-300/70 bg-fuchsia-500/10 border-fuchsia-500/20",
     projectUrl: null,
     details: {
-      stack: ["Next.js", "JavaScript / TypeScript", "Puppeteer", "CSS Parser"],
+      stack: ["Next.js", "TypeScript", "Puppeteer", "CSS Parser"],
       year: "2026",
       longDesc:
         "PixelProbe — інструмент для глибокого аналізу інтерфейсів сайтів. Вставляєш посилання — отримуєш повну палітру кольорів, CSS-змінні, типографічну систему та патерни компонентів у форматі готових дизайн-токенів. Вбудований Visual Inspector дозволяє інспектувати елементи прямо в браузері, а CSS Exporter — миттєво експортувати стилі. Підтримка предперегляду: color palette, CSS variables, visual preview.",
