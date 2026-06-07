@@ -985,7 +985,7 @@ function Work({
                 onClick={() => openProject(project)}
               >
                 <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden">
-                  <img src={project.img} alt={project.title} className="w-full h-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}${project.img}`} alt={project.title} className="w-full h-full object-cover" />
                   <div className={`absolute inset-0 bg-gradient-to-t ${project.color} via-transparent to-transparent`} />
                   <div className="absolute top-2.5 sm:top-3 left-2.5 sm:left-3">
                     <span className={`px-2 py-0.5 sm:py-1 rounded-md border text-[10px] font-semibold ${project.tagColor}`}>
