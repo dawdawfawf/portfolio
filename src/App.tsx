@@ -23,12 +23,12 @@ const PROJECTS = [
   {
     title: "P2P Marketplace (Demo)",
     desc: "Повноцінна P2P-платформа для торгівлі між користувачами: оголошення, фільтри, чат, система рейтингів та безпечні угоди.",
-    img: "/1/1.png",
+    img: "./1/1.png",
     color: "from-violet-600/20 to-cyan-600/10",
     border: "border-violet-500/25",
     tag: "Marketplace",
     tagColor: "text-violet-300/70 bg-violet-500/10 border-violet-500/20",
-    gallery: ["/1/1.png", "/1/2.png", "/1/3.jpg", "/1/4.png"],
+    gallery: ["./1/1.png", "/1/2.png", "/1/3.jpg", "/1/4.png"],
     projectUrl: "https://zxckys.vercel.app/",
     details: {
       stack: ["React", "JavaScript / TypeScript", "Node.js", "Vercel (test)"],
@@ -40,12 +40,12 @@ const PROJECTS = [
   {
     title: "CoffeeOnly (Demo)",
     desc: "Сучасний інтернет-магазин спеціалізованої кави з каталогом, фільтрами, кошиком та прямими поставками від фермерів.",
-    img: "/2/2.png",
+    img: "./2/2.png",
     color: "from-green-600/20 to-emerald-600/10",
     border: "border-green-500/25",
     tag: "E-commerce",
     tagColor: "text-green-300/70 bg-green-500/10 border-green-500/20",
-    gallery: ["/2/2.png"],
+    gallery: ["./2/2.png"],
     projectUrl: null,
     details: {
       stack: ["React", "JavaScript / TypeScript", "Next.js", "Tailwind CSS"],
@@ -57,12 +57,12 @@ const PROJECTS = [
   {
     title: "PixelProbe (Demo)",
     desc: "Інструмент для аналізу UI будь-якого сайту: витягує кольори, відступи, шрифти та паттерни компонентів у готові дизайн-токени.",
-    img: "/3/3.png",
+    img: "./3/3.png",
     color: "from-fuchsia-600/20 to-violet-600/10",
     border: "border-fuchsia-500/25",
     tag: "Dev Tool",
     tagColor: "text-fuchsia-300/70 bg-fuchsia-500/10 border-fuchsia-500/20",
-    gallery: ["/3/3.png"],
+    gallery: ["./3/3.png"],
     projectUrl: null,
     details: {
       stack: ["Next.js", "JavaScript / TypeScript", "Puppeteer", "CSS Parser"],
