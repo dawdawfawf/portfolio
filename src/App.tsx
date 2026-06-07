@@ -16,6 +16,7 @@ import {
   Menu,
 } from "lucide-react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import { asset } from "./utils/asset";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -23,8 +24,8 @@ const PROJECTS = [
   {
     title: "P2P Marketplace (Demo)",
     desc: "Повноцінна P2P-платформа для торгівлі між користувачами: оголошення, фільтри, чат, система рейтингів та безпечні угоди.",
-    img: "/1/1.png",
-    gallery: ["/1/1.png", "/1/2.png", "/1/3.jpg", "/1/4.png"],
+    img: asset("/1/1.png"),
+    gallery: [asset("/1/1.png"), asset("/1/2.png"), asset("/1/3.jpg"), asset("/1/4.png")],
     color: "from-violet-600/20 to-cyan-600/10",
     border: "border-violet-500/25",
     tag: "Marketplace",
@@ -40,8 +41,8 @@ const PROJECTS = [
   {
     title: "CoffeeOnly (Demo)",
     desc: "Сучасний інтернет-магазин спеціалізованої кави з каталогом, фільтрами, кошиком та прямими поставками від фермерів.",
-    img: "/2/2.png",
-    gallery: ["/2/2.png"],
+    img: asset("/2/2.png"),
+    gallery: [asset("/2/2.png")],
     color: "from-green-600/20 to-emerald-600/10",
     border: "border-green-500/25",
     tag: "E-commerce",
@@ -57,8 +58,8 @@ const PROJECTS = [
   {
     title: "PixelProbe (Demo)",
     desc: "Інструмент для аналізу UI будь-якого сайту: витягує кольори, відступи, шрифти та паттерни компонентів у готові дизайн-токени.",
-    img: "/3/3.png",
-    gallery: ["/3/3.png"],
+    img: asset("/3/3.png"),
+    gallery: [asset("/3/3.png")],
     color: "from-fuchsia-600/20 to-violet-600/10",
     border: "border-fuchsia-500/25",
     tag: "Dev Tool",

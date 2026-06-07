@@ -1,5 +1,4 @@
 node_modules
 .vite
-.github
 dist
 .env
